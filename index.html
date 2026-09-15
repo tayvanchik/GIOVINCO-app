@@ -1298,6 +1298,7 @@ function enableDragScroll(el){
 }
 
 /* ---------- theme ---------- */
+<<<<<<< HEAD
 let currentTheme = localStorage.getItem('giovinco_theme') || 'dark';
 function applyTheme(){
   document.documentElement.setAttribute('data-theme', currentTheme === 'light' ? 'light' : '');
@@ -1307,6 +1308,17 @@ function applyTheme(){
 function toggleTheme(){
   currentTheme = currentTheme === 'light' ? 'dark' : 'light';
   localStorage.setItem('giovinco_theme', currentTheme);
+=======
+let currentTheme = localStorage.getItem('totsamiy_theme') || 'dark';
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', currentTheme === 'light' ? 'light' : '');
+  const toggle = document.getElementById('theme-toggle');
+  if(toggle) toggle.classList.toggle('on', currentTheme === 'light');
+}
+function toggleTheme(){
+  currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+  localStorage.setItem('totsamiy_theme', currentTheme);
+>>>>>>> 39a3678582581e52f5861ae41355a283bc944cd4
   applyTheme();
 }
 
